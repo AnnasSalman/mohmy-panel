@@ -3,9 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import theme from "./styles/theme";
+import {ColorModeScript} from "@chakra-ui/react";
+import "@fontsource/roboto-slab"; // Defaults to weight 400.
+import "@fontsource/roboto"; // Defaults to weight 400.
+import "@fontsource/josefin-sans";
 
 ReactDOM.render(
   <React.StrictMode>
+    <ColorModeScript initialColorMode={theme.config.initialColorMode} />
     <App />
   </React.StrictMode>,
   document.getElementById('root')
